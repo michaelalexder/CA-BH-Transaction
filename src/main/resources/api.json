@@ -1,0 +1,77 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Transaction service API",
+    "description": "Transaction service",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/transactions": {
+      "post": {
+        "summary": "All transactions",
+        "tags": [
+          "transactions"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "username",
+            "description": "User name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/transactionItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "transactionItem": {
+        "type": "object",
+        "required": [
+          "fromAccount",
+          "toAccount",
+          "amount",
+          "createdAt",
+          "updatedAt"
+        ],
+        "properties": {
+          "fromAccount": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "toAccount": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}
