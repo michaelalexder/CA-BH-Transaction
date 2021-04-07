@@ -4,19 +4,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.bhca</groupId>
-		<artifactId>common</artifactId>
+		<artifactId>CA-BH-Common</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>TransactionService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TransactionService</name>
+	<name>CA-BH-Transaction</name>
 	<description>Transactions service</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.bhca</groupId>
-			<artifactId>common</artifactId>
+			<artifactId>CA-BH-Common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
