@@ -6,20 +6,56 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/transactions": {
+    "/api/v1/transaction/create": {
       "post": {
-        "summary": "All transactions",
+        "summary": "Create transaction",
+        "tags": [
+          "transactions"
+        ],
+        "requestBody": {
+          "$ref": "#/components/schemas/createTransactionRequest"
+        },
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "500": {
+            "description": "Internal Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errorView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errorView"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/transaction/{customer}": {
+      "get": {
+        "summary": "All transactions for customer",
         "tags": [
           "transactions"
         ],
         "parameters": [
           {
             "in": "path",
-            "name": "username",
-            "description": "User name",
+            "name": "customer",
             "required": true,
             "schema": {
               "type": "string",
+              "format": "uuid",
               "nullable": false
             }
           }
