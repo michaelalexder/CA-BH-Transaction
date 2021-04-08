@@ -61,6 +61,27 @@
   },
   "components": {
     "schemas": {
+      "createTransactionRequest": {
+        "type": "object",
+        "required": [
+          "account",
+          "customer",
+          "amount"
+        ],
+        "properties": {
+          "account": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "customer": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "amount": {
+            "type": "number"
+          }
+        }
+      },
       "errorView": {
         "type": "object",
         "required": [

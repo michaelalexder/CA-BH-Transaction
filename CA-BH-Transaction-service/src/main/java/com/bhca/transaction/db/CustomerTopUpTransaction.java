@@ -15,13 +15,13 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
-public class CustomerTransaction extends AbstractBaseEntity {
+public class CustomerTopUpTransaction extends AbstractBaseEntity {
 
     @Column(nullable = false)
-    private UUID fromAccount;
+    private UUID customer;
 
     @Column(nullable = false)
-    private UUID toAccount;
+    private UUID account;
 
     @Column(nullable = false)
     private BigDecimal amount;
