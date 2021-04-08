@@ -100,18 +100,18 @@
       "transactionItem": {
         "type": "object",
         "required": [
-          "fromAccount",
-          "toAccount",
+          "customer",
+          "account",
           "amount",
           "createdAt",
           "updatedAt"
         ],
         "properties": {
-          "fromAccount": {
+          "customer": {
             "type": "string",
             "format": "uuid"
           },
-          "toAccount": {
+          "account": {
             "type": "string",
             "format": "uuid"
           },
@@ -120,11 +120,11 @@
           },
           "createdAt": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
           },
           "updatedAt": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
           }
         }
       }

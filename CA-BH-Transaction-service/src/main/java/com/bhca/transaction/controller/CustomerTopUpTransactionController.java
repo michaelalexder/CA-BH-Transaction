@@ -27,9 +27,9 @@ public class CustomerTopUpTransactionController {
         logger.debug("Transaction created");
     }
 
-    @GetMapping("/{account}")
-    public List<TransactionItem> list(@PathVariable UUID account) {
-        logger.debug("Transaction list is called for account " + account);
-        return service.getTransfers(account);
+    @GetMapping("/{customer}")
+    public List<TransactionItem> list(@PathVariable UUID customer) {
+        logger.debug("Transaction list is called for account " + customer);
+        return service.getTransfers(customer);
     }
 }
