@@ -13,7 +13,14 @@
           "transactions"
         ],
         "requestBody": {
-          "$ref": "#/components/schemas/createTransactionRequest"
+          "description": "Internal Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/createTransactionRequest"
+              }
+            }
+          }
         },
         "responses": {
           "200": {
