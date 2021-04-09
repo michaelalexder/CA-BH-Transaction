@@ -14,6 +14,7 @@
 	<properties>
 		<java.version>8</java.version>
 		<lombok.version>1.18.20</lombok.version>
+		<cabh-version>0.0.1-SNAPSHOT</cabh-version>
 		<docker.image.prefix>ca-bh</docker.image.prefix>
 		<docker.image.name>transaction</docker.image.name>
 	</properties>
@@ -22,12 +23,12 @@
 		<dependency>
 			<groupId>com.bhca</groupId>
 			<artifactId>CA-BH-Common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${cabh-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.bhca</groupId>
 			<artifactId>CA-BH-Transaction-API</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${cabh-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
