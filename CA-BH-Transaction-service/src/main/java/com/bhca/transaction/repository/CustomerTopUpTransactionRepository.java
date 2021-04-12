@@ -9,5 +9,5 @@ import java.util.UUID;
 
 public interface CustomerTopUpTransactionRepository extends JpaRepository<CustomerTopUpTransaction, UUID> {
 
-    List<CustomerTopUpTransaction> findByCustomer(UUID customer, Sort sort);
+    List<CustomerTopUpTransaction> findByAccountIn(List<UUID> accountIds, Sort sort);
 }
